@@ -1,4 +1,4 @@
-"use strict"
+// "use strict"
 // setTimeout (go, 5000);
 // function go() {
 //     alert ('Hello world!!!')
@@ -78,6 +78,84 @@
 // object
 // sumbol
 
-let name = 'Vlad';
+// let name = 'Vlad';
 
-alert(`hello, ${"name"}`);
+// alert(`hello, ${"name"}`);
+
+// age = prompt('How old are you?', '');
+// alert(`You are ${age} years old`);
+
+// let age = confirm('Are you old?');
+// alert(age);
+
+// let yourName = prompt('Whats your name?');
+// let yourAge = prompt('Whats your age?');
+// let yourHobby = prompt('Whats your hobby?');
+// alert('You are finish registration?');
+// alert(`Your name ${yourName}, your age ${yourAge}, your hobby ${yourHobby}`);
+
+// let value = true;
+// alert(typeOf, value);
+
+// value = String(value);
+// alert(typeOf, value);
+
+// alert(Number(true));
+
+// let x = '23 ';
+// let y = '14';
+// alert(+x + +y); // унарний оперант '+' перед значенням перетворює його на число
+
+// Пріоритет операторів:
+// + унарний плюс 15;
+// - унарний мінус 15;
+// ** зведення в ступінь 14;
+// * помноження 13;
+// / ділення 13;
+// + складання 12;
+// - віднімання 12;
+// = присвоєння 2;
+
+// let n = 2;
+// n += 5; // n = n + 5;
+// n *= 2; // n = n * 2;
+// alert(n);
+
+// let n = 38;
+// n++; // n = n + 1;
+// alert(n);
+
+// let m = 38;
+// m--; // m = m - 1;
+// alert(m);
+
+// 1 = 1 //
+// 2 = 1 //
+// 3 = 1
+// 4 = 2
+// 5 = 6
+// 6 = 10 //
+// 7 = 10 //
+// 8 = 2;
+// 9 = -1; //
+// 10 = -4;
+// 11 = -14;
+// 12 = 1;
+// 13 = NaN;
+// 14 = NaN; //
+
+// let n = ('-9 ' + 5);
+// alert(n);
+
+// let a = prompt ('Your name', 1);
+// let b = prompt ('Your name', 2);
+
+// alert(a + b);
+
+// let a = 3;
+// let b = 4;
+
+// alert(a < b);
+
+
+

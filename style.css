@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+ .container {
+    max-width: 960px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 15px;
+}
+
+/* #demo {
+    display: none;
+} */
+
+/*.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-box img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+} */
