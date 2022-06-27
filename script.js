@@ -157,5 +157,51 @@
 
 // alert(a < b);
 
+// alert('aabbcc' > 'aabbee');
+
+// alert(null > 0);
+// alert(null == 0);
+// alert(null !== 0);
 
 
+
+// 1 true
+// 2 false
+// 3 false //
+// 4 true
+// 5 false
+// 6 true //
+// 7 true //
+
+// let year = prompt('In witch year started ECMAScript 2015', '');
+// if (year == 2015) {
+//   alert('You are right');
+//   alert('You are realy smart')
+// }else{
+//   alert('Your answear wrong. Learn harder!')
+// };
+
+// let year = prompt('ECMAScript');
+
+// if (year < 2015) {
+//   alert('to early');
+// }else if (year > 2015) {
+//   alert('to late');
+// }else{
+//   alert('you are right');
+// };
+
+// let accessAllowed;
+// let age = prompt('How old are you?');
+
+// if (age >= 18) {
+//   accessAllowed = true;
+// } else {
+//   accessAllowed = false;
+// }
+
+// alert(accessAllowed);
+
+let accessAllowed = age >= 18 ? true : false;
+
+alert(accessAllowed);

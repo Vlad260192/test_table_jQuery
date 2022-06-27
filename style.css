@@ -9,6 +9,26 @@
     padding-inline: 15px;
 }
 
+
+
+#hidden-search-box {
+    display: none;
+}
+
+form > input {
+    max-width: 250px;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+form > button {
+    padding: 10px 15px;
+}
+
+label {
+    
+}
+
 /* #demo {
     display: none;
 } */
@@ -33,3 +53,4 @@
     height: auto;
     object-fit: cover;
 } */
+
