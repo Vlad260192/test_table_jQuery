@@ -1,0 +1,13 @@
+{
+    "name": "Jack",
+    "age": "34",
+    "address": {
+      "location": "Kharkiv",
+      "country": "Ukraine",
+      "street": "Nayki"
+    },
+    "contacts": [
+      "+380955453443",
+      "+380639392443"
+    ]
+  }

@@ -1,4 +1,4 @@
-// "use strict"
+"use strict"
 // setTimeout (go, 5000);
 // function go() {
 //     alert ('Hello world!!!')
@@ -476,12 +476,12 @@
 //     alert( `number ${i}!` );
 //   }
 
-  let i = 0;
-  while (i < 3) {
-    // alert (`number ${i}`);
-    console.log(`number ${i}`);
-    i++;
-  }
+  // let i = 0;
+  // while (i < 3) {
+  //   // alert (`number ${i}`);
+  //   console.log(`number ${i}`);
+  //   i++;
+  // }
 
 // let value = prompt('Enter number', '');
 
@@ -490,3 +490,135 @@
 //         value = prompt('Try one more time')
 //     }
 // }
+
+
+// let user = {
+//   name: 'Wolf',
+//   age: 30,
+//   toString () {
+//     return `{name: "${this.name}", age: ${this.age}}`;
+//   }
+// };
+
+// alert(user);
+
+// let person = {
+//   name: "Aaron",
+//   age: 25,
+//   sex: "male",
+
+//   toString() {
+//     return `{name: "${this.name}", age: "${this.age}", sex: "${this.sex}"}`
+//   }};
+
+// alert(person);
+
+
+// var object = {
+//   name: 'Jack',
+//   age: 34,
+//   address: {
+//     location: 'Kharkiv',
+//     country: 'Ukraine',
+//     street: 'Nayki'
+//   },
+//   contacts: [
+//     '+380955453443',
+//     '+380639392443'
+//   ]
+// }
+
+// var array = [
+//   10,
+//   "new text 1",
+//   true,
+//   false,
+//   null,
+//   [1,2,3],
+//   {"age": 20}
+// ]
+
+// document.getElementById("demo").innerHTML = object.address.location;
+
+// var json =  JSON.stringify(object);
+
+// console.log(json);
+
+// var par = JSON.parse(json);
+
+// console.log(par);
+
+
+// =========== stop-line ===========  //
+
+// const myObject = {
+//   name: 'John',
+//   age: 31,
+//   location: 'New York',
+// };
+
+// document.getElementById("demo").innerHTML = myObject.age;
+
+// =========== stop-line ===========  //
+
+// let text = '["Ford", "Volvo", "Kia", "BMW"]';
+// let array = JSON.parse(text);
+// document.getElementById("demo").innerHTML = array[3];
+
+
+// let text = '{"name": "John", "birth": "1986-12-14", "city": "New York"}';
+// let obj = JSON.parse(text);
+// obj.birth = new Date(obj.birth);
+// document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth  + " " +  obj.city;
+
+
+// const test = [
+//   {
+//     "company": "Centro comercial Moctezuma",
+//     "contact": "Francisco Chang",
+//     "country": "Mexico"
+//   },
+//   {
+//     "company": "Ernst Handel",
+//     "contact": "Roland Mendel",
+//     "country": "Germany"
+//   },
+//   {
+//     "company": "Island Trading",
+//     "contact": "Maria Bennett",
+//     "country": "UK"
+//   },
+//   {
+//     "company": "Laughing Bacchus Winecellars",
+//     "contact": "Yoshi Tannamuri",
+//     "country": "Canada"
+//   },
+//   {
+//     "company": "Magazzini Alimentari Riuniti",
+//     "contact": "Giovanni Rovelli",
+//     "country": "Italy"
+//   },
+//   {
+//    "company": "Alfreds Futterkiste",
+//    "contact": "Maria Anders",
+//    "country": "Germany"
+//   }
+//  ];
+
+
+//  let newObj = JSON.stringify(test);
+
+// console.log(newObj);
+
+// let obj = JSON.parse(newObj);
+
+// console.log(obj);
+
+
+// =========== remind practise ===========  //
+
+let a = 'Hello';
+let b = 'Franklin';
+let c = a + ", " + b;
+
+alert(c);

@@ -54,3 +54,58 @@ label {
     object-fit: cover;
 } */
 
+
+*,
+*::before,
+*::after {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellowgreen;
+}
+
+.container {
+    max-width: 980px;
+    width: 100%;
+    background-color: #333;
+    min-height: 420px;
+    padding: 30px 15px;
+    margin: 0px 30px;
+    text-align: center;
+    border-radius: 54px 0px;
+    /* position: relative;
+    z-index: 10; */
+    box-shadow: 10px 10px 10px yellowgreen;
+}
+
+/* .container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 15px;
+    top: 15px;
+    background-color: yellowgreen;
+    border-radius: 54px 0px;
+    opacity: 0.4;
+    z-index: -1;
+} */
+
+.container h1 {
+    margin: 0px 0px 30px 0px;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.container #demo {
+    font-size: 24px;
+    font-weight: 400;
+}
