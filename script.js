@@ -1,624 +1,267 @@
-"use strict"
-// setTimeout (go, 5000);
-// function go() {
-//     alert ('Hello world!!!')
-// };
-
-// let age = 29;
-// let name = 'Vlad';
-
-// if (age > 16) {
-//     alert ('You are too old for this')
-// } else {
-//     ('Welcome to the club')
-// }
-
-
-// let vine = 3; // number type
-// let name = 'Pit'; // string type
-// let dark = false; // boolean type
-// let someVariable; // undefined
-// let myFirstName = 'Vlad';
-
-// let FirstName = 'Vlad ';
-// let SecondName = 'Kapustianskyi';
-// alert (FirstName + SecondName);
-
-
-// var price = 100;
-// var discont = 25;
-// var total = price - (price * (discont / 100)); // все що після равно нназивається виразом (виражение)
-// console.log(total);
-
-// var name = 'Vlad';
-// var secondName = 'Kapustianskyi';
-// var myInfo = name + secondName; // операція конкатенації (працює лише зі строковими елементами)
-// alert(myInfo);
-
-// var firstNumber = 22;
-// var secondNumber = '11';
-// var myInfo = firstNumber + secondNumber; // операція конкатенації (працює лише зі строковими елементами)
-// alert(myInfo);
-
-// var age = 20;
-// alert(age >= 20);
-
-// while, for, for in, forEach
-
-// var number = 50;
-// while(number > 0){
-//     document.write('Number more than 0 <br>');
-//     number = number - 1;
-// }
-// document.write('Number less than 0');
-
-// var apples = 5;
-
-// while(apples < 10){
-//     document.write('Give apple to my friend <br>')
-//     apples = apples + 1;
-// }
-// document.write('<br>Sorry, I don`t have apples');
-
-// let firstName = 'Dmytro';
-// alert (`Hi, ${firstName}!`);
-
-// let result = 2 + 1;
-// alert(`Total score: ${result}`);
-
-// let age = null;
-// alert(age);
-
-// number
-// string
-// boolean
-// undefined
-// null
-// bigInt
-// object
-// sumbol
-
-// let name = 'Vlad';
-
-// alert(`hello, ${"name"}`);
-
-// age = prompt('How old are you?', '');
-// alert(`You are ${age} years old`);
-
-// let age = confirm('Are you old?');
-// alert(age);
-
-// let yourName = prompt('Whats your name?');
-// let yourAge = prompt('Whats your age?');
-// let yourHobby = prompt('Whats your hobby?');
-// alert('You are finish registration?');
-// alert(`Your name ${yourName}, your age ${yourAge}, your hobby ${yourHobby}`);
-
-// let value = true;
-// alert(typeOf, value);
-
-// value = String(value);
-// alert(typeOf, value);
-
-// alert(Number(true));
-
-// let x = '23 ';
-// let y = '14';
-// alert(+x + +y); // унарний оперант '+' перед значенням перетворює його на число
-
-// Пріоритет операторів:
-// + унарний плюс 15;
-// - унарний мінус 15;
-// ** зведення в ступінь 14;
-// * помноження 13;
-// / ділення 13;
-// + складання 12;
-// - віднімання 12;
-// = присвоєння 2;
-
-// let n = 2;
-// n += 5; // n = n + 5;
-// n *= 2; // n = n * 2;
-// alert(n);
-
-// let n = 38;
-// n++; // n = n + 1;
-// alert(n);
-
-// let m = 38;
-// m--; // m = m - 1;
-// alert(m);
-
-// 1 = 1 //
-// 2 = 1 //
-// 3 = 1
-// 4 = 2
-// 5 = 6
-// 6 = 10 //
-// 7 = 10 //
-// 8 = 2;
-// 9 = -1; //
-// 10 = -4;
-// 11 = -14;
-// 12 = 1;
-// 13 = NaN;
-// 14 = NaN; //
-
-// let n = ('-9 ' + 5);
-// alert(n);
-
-// let a = prompt ('Your name', 1);
-// let b = prompt ('Your name', 2);
-
-// alert(a + b);
-
-// let a = 3;
-// let b = 4;
-
-// alert(a < b);
-
-// alert('aabbcc' > 'aabbee');
-
-// alert(null > 0);
-// alert(null == 0);
-// alert(null !== 0);
-
-
-
-// 1 true
-// 2 false
-// 3 false //
-// 4 true
-// 5 false
-// 6 true //
-// 7 true //
-
-// let year = prompt('In witch year started ECMAScript 2015', '');
-// if (year == 2015) {
-//   alert('You are right');
-//   alert('You are realy smart')
-// }else{
-//   alert('Your answear wrong. Learn harder!')
-// };
-
-// let year = prompt('ECMAScript');
-
-// if (year < 2015) {
-//   alert('to early');
-// }else if (year > 2015) {
-//   alert('to late');
-// }else{
-//   alert('you are right');
-// };
-
-// let accessAllowed;
-// let age = prompt('How old are you?');
-
-// if (age >= 18) {
-//   accessAllowed = true;
-// } else {
-//   accessAllowed = false;
-// }
-
-// alert(accessAllowed);
-
-// let accessAllowed = age >= 18 ? true : false;
-
-// alert(accessAllowed);
-
-// let apple = '3';
-// let grape = '2';
-
-// alert(+apple + +grape);
-
-// alert(Number(apple) + Number(grape));
-
-// let comfy = 5;
-// alert(comfy++);
-
-// let a = prompt('First question', 1);
-// let b = prompt('Second question', 2);
-
-// alert (+a + +b);
-
-// let hour = 12;
-// let isWeekend = true;
-// if (hour < 10 || hour > 18 || isWeekend) {
-//     alert('Office closet');
-// }
-
-// let question = prompt('What year?', '');
-
-// if (question <= 0) {
-//     alert ('Close but, you don`t get')
-// };
-
-// let accessAllowed;
-// let age = prompt('How old are you?', '');
-
-// if (age >= 18) {
-//     accessAllowed == true;
-//     alert('you are welcome');
-// }else{
-//     accessAllowed == false;
-//     alert('see you next time');
-// }
-
-// let result = (age >= 18) ? true : false;
-
-// let age = prompt('Який твій вік?', '');
-// let message;
-
-// if (age < 3) {
-//     message = 'Вітаю, малечо!';
-// }else if (age < 18) {
-//     message = 'Вітаю, малечо!';
-// }else if (age < 100) {
-//     message = 'Моя пошана!';
-// }else{
-//     message = 'Який цікавий вік, ти з якої планети';
-// };
-
-// alert(message);
-
-//let company = prompt('Whitch company create JS?', '');
-
-// (company == 'Netscape') ?
-// alert('It`s true') : alert('It`s false thinking');
-
-// if (company == 'Netscape') {
-//     alert('its true');
-// } else {
-//     alert('You are wrong');
-// }
-
-// let question = prompt('What was the first naming of JS?', '');
-
-// if(question == 'ECMAScript') {
-//     alert('you are right');
-// }else{
-//     alert('you are wrong!');
-// };
-
-// let value = prompt('Write ramdon number from -1 to 1', '');
-// if(value > '0'){
-//     alert('1');
-// }else if(value == '0'){
-//     alert('0');
-// }else if(value < '0'){
-//     alert('-1');
-// };
-
-
-// let age = prompt('Вік', 18);
-
-// let message = (age < 3) ? 'Вітаю, малечо!' :
-// (age < 18) ? 'c' :
-// (age < 100) ? 'Моя пошана!' :
-// 'Який цікавий вік, ти з якої планети';
-
-// alert(message);
-
-// ------------
-
-// let a = +prompt('Enter variable A', '');
-// let b = +prompt('Enter variable B', '');
-
-// let result = (a + b < 4) ? 'Less': 'More';
-
-// alert(result);
-
-
-// let message;
-
-// if (login == 'Сотрудник') {
-//   message = 'Привет';
-// } else if (login == 'Директор') {
-//   message = 'Здравствуйте';
-// } else if (login == '') {
-//   message = 'Нет логина';
-// } else {
-//   message = '';
-// }
-
-// let login = prompt('Enter login', '');
-
-// let message = (login == 'Emploee') ? 'Привет' : 
-// (login == 'Директор') ? 'Здравствуйте' : 
-// (login == '') ? 'Нет логина' : 
-// '';
-
-// alert(message);
-
-
-// result = a || b;
-
-// alert(true || true); // true
-// alert(false || true); // true
-// alert(true || false); // true
-// alert(false || false); // false
-
-
-// let hour = 12;
-// let isWeekend = false;
-
-// if (hour < 10 || hour > 18 || isWeekend) {
-//   alert('Office closed')
-// }else{
-//   alert('office open')
-// };
-
-// alert(1 || 0);
-// alert(true || 'no matter what');
-// alert(null || 0 || 1);
-// alert(null || false || undefined);
-
-// result = a && b;
-// alert(true && true); // true
-// alert(true && false); // false
-// alert(false && true); // false
-// alert(false && false); // false
-
-// let hour = 12;
-// let minute = 30;
-
-// if (hour == 12 && minute == 30) {
-//   alert('The time is 12.30')
-// };
-
-// let a = 'Hello';
-// let b = undefined;
-// let c;
-
-// let submit = a && b && c;
-// alert (submit);
-
-// let age;
-
-// if (age >= 14 && age <= 90) {
-//     alert(age);
-// }
-
-// if (!(age >= 14 && !age <= 90));
-
-// let userName = prompt('Enter login', '');
-
-// if (userName === 'admin' || userName === 'Admin') {
+$(document).ready(function() {
     
-//     let password = prompt('Gain password', '');
+    $.getJSON('test.json', function (data) {
+        let test = '';
 
-//     if (password === 'Master' || password === 'master') {
-//         alert('You are wellcome');
-//     }else if (password === '' || password === null){
-//         alert('Action canceled')
-//     }else{
-//         alert('Wrong password')
-//     };
-// }else if (userName === '' || userName === null) {
-//     alert('Action canceled')
-// }else {
-//     alert('I dont know you')
-// };
+        $.each(data, function(key, value) {
 
-// let i = 0;
-// while (i < 3) {
-//     alert(i);
-//     i++;
+            test += '<tr>';
+            test += '<td>' +
+                value.company + '</td>';
+            test += '<td>' +
+                value.contact + '</td>';
+            test += '<td>' +
+                value.country + '</td>';
+            test += '</tr>';
+
+        });
+
+        $('#table tbody').append(test);
+
+
+        // $('.option__list li').attr('data-index', function(index) {
+        //     return index + 1;
+        // });
+
+        $('.option__list li').attr('id', function(index) {
+            return (index + 1) + 'c';
+        });
+
+        $('tbody tr td').attr('id', function(index) {
+            return (index + 1) + 'c';
+        });
+
+        function getRows (override, value) {
+            let filter = "table tbody tr td";
+            $('#option__listA #option__listB #option__listC').each(function() {
+                
+            })
+        }
+
+        // $('li#1c').on('click', function(){
+        //     $('td').each(function(){
+
+        //         let $td = $(this).attr('id');
+        //         if ($td == 'td#1c') {
+        //             $(this).css('visibility', 'hidden', 'opacity', '0');
+        //         }
+
+
+        //         // if($('td#1c')){
+        //         //     $('td#1c').css('visibility', 'visible', 'opacity', '1');
+        //         // } else {
+        //         //     $(this).css('visibility', 'hidden', 'opacity', '0');
+        //         // }
+        //     });
+        // });
+
+    });
+
+});
+
+
+
+
+// let $button = $('li');
+//     let $char = $('td');
+
+//     console.log($char[1]);
+//     console.log($button[1]);
+
+
+    
+
+//     console.log( $('h2').length );
+    
+//     $('.btn').on('click', function(){
+//         let $x = $('.block');
+//         $x.prop('color', '#ff0000');
+//         $x.append('This color property: ' + $x.prop('color'));
+//         $x.removeProp('color');
+//     });
+
+//     // $('.li').attr('id', function(index, valueAttr){
+//     //     if (valueAttr === undefined) {
+//     //         return 'item-' + (index + 1);
+//     //     }
+//     // });
+
+//     $('li').attr('data-index', function(index){
+//         return index + 1;
+//     });
+
+    // let valCheckedColor = $('input[type="radio"][name="color"]:checked').val();
+    // console.log(valCheckedColor);
+
+
+    // let brands = $('#brands').val();
+    // let output = brands.join(', ')
+    // console.log(output);
+
+    //  $('.block').hover(
+    //     function(){
+    //     $(this).addClass('block_hover');
+    //  },
+    //     function(){
+    //         $(this).removeClass('block_hover');
+    // });
+
+
+
+    // let lists = $(' li ');
+    // for (let i = 0, length = lists.length; i < length; i++) {
+    //     let list = lists[i];
+    //     console.log(list.textContent);
+    // }
+
+    // let elements = $(' li ');
+    // let lastElement = elements.get();
+    // console.log(lastElement);
+    
+    // let listButtons = document.getElementsByTagName('li');
+    
+    // let countLi = $('li').length;
+    // alert(countLi);
+
+    // let countTd = $('td').length;
+    // alert(countTd);
+
+    // let numbers = [-1, -3, 2, 0, -4, 3, -5, 6];
+
+    // $.each(numbers, function(index, value) {
+    //     if (value > 0) {
+    //         alert([value]);
+    //     }
+    // });
+
+    // let myPlainObject = {key1: 'value1', key2: 'value2', key3: 'value3'};
+    // let $myPlainObject = $(myPlainObject);
+
+    // $myPlainObject.prop('key1', 'volume');
+    // $myPlainObject.prop('key4', 'value4');
+
+    // $myPlainObject.on('eventName', function() {
+    //     console.log('eventName was called');
+    // })
+
+    // $myPlainObject.triggerHandler('eventName');
+
+    
+
+
+
+    
+
+    // $('.column_B .option__list li').filter(':nth-child(1)').on('click', function() {
+    //     $('tbody tr td').each(function() { 
+    //         if($(this).attr('class') == 'B') {
+    //             $(this).css('visibility', 'hidden', 'opacity', '0');
+    //         } else {
+    //             // alert('Remove');
+    //         }
+    //     });
+    // });
+
+    // $('.column_C .option__list li').filter(':nth-child(1)').on('click', function() {
+    //     $('tbody tr td').each(function() { 
+    //         if($(this).attr('class') == 'C') {
+    //             $(this).css('visibility', 'hidden', 'opacity', '0');
+    //         } else {
+    //             // alert('Remove');
+    //         }
+    //     });
+    // });
+
+    // function getRows(override, value) {
+    //     var filter = "table tbody tr td";
+    //     $("#A,#B,#C").each(function() {
+    //         var test = this === override ? value : $(this).val();
+    //         if (test !== "Toate") filter += ":contains(" + test + ")"; 
+    //     });
+    //     return $(filter).parent();
+    // }
+    
+    // $('#A,#B,#C').on('change', function() {
+    //     $('table tbody tr').hide();
+    //     getRows().show();
+    //     $('#A,#B,#C').each(function (i, select) {
+    //         $('option', this).each(function () {
+    //             $(this).toggle(getRows(select, $(this).text()).length > 0);
+    //         });
+    //     });
+    // });
+
+    
+
+    // $(document).ready(function($) {
+    //     var rows = $('table tr').each(function() {
+    //         var row = $(this);
+    //         var columns = row.children('td');
+    
+    //         row.data('name-chars', [
+    //             columns.eq(0).html()[0].toUpperCase(),
+    //             columns.eq(1).html()[0].toUpperCase(),
+    //         ]);
+    //     });
+    
+    //     $('select').change(function() {
+    //         var char = $(this).val().toUpperCase();
+    
+    //         rows.each(function() {
+    //             var row = $(this);
+    //             var chars_to_match = row.data('name-chars');
+    //             if($.inArray(char, chars_to_match) > -1) {
+    //                 row.show();
+    //             }
+    //             else {
+    //                 row.hide();
+    //             }
+    //         });
+    //     });
+    // });
+
+
+// ====== How to display content from object ===== //
+
+// const PHONE_NUMBER = {
+//     'Fire Team': [
+//         ['Number 1', '101'],
+//         ['Number 2', '112'],
+//         ['Number 3', '01']
+//     ],
+//     'Police': [
+//         ['Number 1', '102'],
+//         ['Number 2', '112']
+//     ],
+//     'Ambulence': [
+//         ['Number 1', '103'],
+//         ['Number 2', '911']
+//     ]
 // }
 
-// let i = 3;
-// while (i != 0) {
-//     alert(i);
-//     --i;
-// }
+// document.querySelector('.content').innerHTML = `<table class="phone"></table>`;
 
-// let i = 5;
-// while (i) alert(i--);
+// for(key in PHONE_NUMBER) {
+//     let row = document.createElement('tr');
+//     row.innerHTML = `<td colspan="2"> ${key} </td>`;
+//     document.querySelector('.phone').appendChild(row);
 
-// let i = 5;
-// do {
-//     alert(i);
-//     --i;
-// } while(i != 0);
-
-// for (let i = 0; i < 5; i++) {
-//     alert(i);
-// };
-
-// let i = 0;
-
-// for (; i < 3;) {
-//     alert(i++);
-// };
-
-// for(let i = 0; i < 5; ++i){
-//     alert(i);
-// };
-
-// let i = 0;
-// do {
-//     alert(i);
-//     i++;
-// } while(i < 5);
-
-// let sum = 0;
-
-// while(true) {
-//     let value = +prompt('Enter number', '');
-//     if (!value) break;
-//     sum += value;
-// }
-
-// alert('Total cost ' + sum);
-
-// for (let i = 0; i < 10; i++) {
-//     if (i % 2) continue;
-//     alert (i);
-// }
-
-// outer: 
-// for (let i = 0; i < 3; i++) {
-//     for (let j = 0; j < 3; j++) {
-//         let input = prompt(`Enter cordinats (${i},${j})`, '');
-//         if (!input) break outer;
+//     for(i = 0; i<PHONE_NUMBER[key].length; i++) {
+//         let row = document.createElement('tr');
+//         row.innerHTML = `
+//             <td>${PHONE_NUMBER[key][i][0]}</td>
+//             <td>${PHONE_NUMBER[key][i][1]}</td>
+//         `;
+//         document.querySelector('.phone').appendChild(row);
 //     }
 // }
-// alert('Ready');
 
 
-// for (let i = 2; i <= 10; i++) {
-//     if (i % 2 == 0){
-//         alert(i);
-//     }
+// Выбираем всех детей из document.body
+
+// for (let i = 0; i < document.body.childNodes; i++) {
+//     alert(document.body.childNodes[i]);
+
+//     elem.childNodes[0] === elem.firstChild;
+//     elem.childNodes[elem.childNodes.length - 1] === elem.lastChild;
 // }
-
-// for (let i = 0; i < 3; i++) {
-//     alert( `number ${i}!` );
-//   }
-
-  // let i = 0;
-  // while (i < 3) {
-  //   // alert (`number ${i}`);
-  //   console.log(`number ${i}`);
-  //   i++;
-  // }
-
-// let value = prompt('Enter number', '');
-
-// for (value = 0; value >= 100; value++){
-//     if (value <= 100) {
-//         value = prompt('Try one more time')
-//     }
-// }
-
-
-// let user = {
-//   name: 'Wolf',
-//   age: 30,
-//   toString () {
-//     return `{name: "${this.name}", age: ${this.age}}`;
-//   }
-// };
-
-// alert(user);
-
-// let person = {
-//   name: "Aaron",
-//   age: 25,
-//   sex: "male",
-
-//   toString() {
-//     return `{name: "${this.name}", age: "${this.age}", sex: "${this.sex}"}`
-//   }};
-
-// alert(person);
-
-
-// var object = {
-//   name: 'Jack',
-//   age: 34,
-//   address: {
-//     location: 'Kharkiv',
-//     country: 'Ukraine',
-//     street: 'Nayki'
-//   },
-//   contacts: [
-//     '+380955453443',
-//     '+380639392443'
-//   ]
-// }
-
-// var array = [
-//   10,
-//   "new text 1",
-//   true,
-//   false,
-//   null,
-//   [1,2,3],
-//   {"age": 20}
-// ]
-
-// document.getElementById("demo").innerHTML = object.address.location;
-
-// var json =  JSON.stringify(object);
-
-// console.log(json);
-
-// var par = JSON.parse(json);
-
-// console.log(par);
-
-
-// =========== stop-line ===========  //
-
-// const myObject = {
-//   name: 'John',
-//   age: 31,
-//   location: 'New York',
-// };
-
-// document.getElementById("demo").innerHTML = myObject.age;
-
-// =========== stop-line ===========  //
-
-// let text = '["Ford", "Volvo", "Kia", "BMW"]';
-// let array = JSON.parse(text);
-// document.getElementById("demo").innerHTML = array[3];
-
-
-// let text = '{"name": "John", "birth": "1986-12-14", "city": "New York"}';
-// let obj = JSON.parse(text);
-// obj.birth = new Date(obj.birth);
-// document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth  + " " +  obj.city;
-
-
-// const test = [
-//   {
-//     "company": "Centro comercial Moctezuma",
-//     "contact": "Francisco Chang",
-//     "country": "Mexico"
-//   },
-//   {
-//     "company": "Ernst Handel",
-//     "contact": "Roland Mendel",
-//     "country": "Germany"
-//   },
-//   {
-//     "company": "Island Trading",
-//     "contact": "Maria Bennett",
-//     "country": "UK"
-//   },
-//   {
-//     "company": "Laughing Bacchus Winecellars",
-//     "contact": "Yoshi Tannamuri",
-//     "country": "Canada"
-//   },
-//   {
-//     "company": "Magazzini Alimentari Riuniti",
-//     "contact": "Giovanni Rovelli",
-//     "country": "Italy"
-//   },
-//   {
-//    "company": "Alfreds Futterkiste",
-//    "contact": "Maria Anders",
-//    "country": "Germany"
-//   }
-//  ];
-
-
-//  let newObj = JSON.stringify(test);
-
-// console.log(newObj);
-
-// let obj = JSON.parse(newObj);
-
-// console.log(obj);
-
-
-// =========== remind practise ===========  //
-
-let a = 'Hello';
-let b = 'Franklin';
-let c = a + ", " + b;
-
-alert(c);
