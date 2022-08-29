@@ -18,25 +18,41 @@ $(document).ready(function() {
 
         $('#table tbody').append(test);
 
+        // $('#myInput').on('keyup', function(){
+        //     let value = $(this).val().toLowerCase();
+        //     $('tbody tr').filter(function(){
+        //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        //     });
+        // });
+
+
+        $(document).ready(function() {
+            $('.search').keyup(function() {
+              let search1 = $('.search').eq(0).val().toLowerCase();
+              let search2 = $('.search').eq(1).val().toLowerCase();
+              $('.s-table tr.data').each(function(i, el) {
+                let val1 = $(el).find('td').eq(0).text().trim().toLowerCase()
+                let val2 = $(el).find('td').eq(1).text().trim().toLowerCase()
+                let ok = (search1 && val1.indexOf(search1) !== -1) || (search2 && val2.indexOf(search2) !== -1)
+                if (ok) $(el).closest('tr').show();
+                else $(el).closest('tr').hide();
+              })
+              return
+            });
+          });
 
         // $('.option__list li').attr('data-index', function(index) {
         //     return index + 1;
         // });
 
-        $('.option__list li').attr('id', function(index) {
-            return (index + 1) + 'c';
-        });
+        // $('.option__list li').attr('id', function(index) {
+        //     return (index + 1) + 'c';
+        // });
 
-        $('tbody tr td').attr('id', function(index) {
-            return (index + 1) + 'c';
-        });
+        // $('tbody tr td').attr('id', function(index) {
+        //     return (index + 1) + 'c';
+        // });
 
-        function getRows (override, value) {
-            let filter = "table tbody tr td";
-            $('#option__listA #option__listB #option__listC').each(function() {
-                
-            })
-        }
 
         // $('li#1c').on('click', function(){
         //     $('td').each(function(){
