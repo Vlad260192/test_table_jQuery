@@ -17,7 +17,6 @@ $(document).ready(function() {
         });
 
         $('#table tbody').append(test);
-
         
         $('tbody tr').attr('id', function(index) {
             return (index + 1) + 'c';
@@ -73,5 +72,4 @@ $(document).ready(function() {
             });
         });
     });
-
 });
