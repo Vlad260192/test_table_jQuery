@@ -20,11 +20,11 @@ $(document).ready(function() {
 
         $('#table tbody').append(test);
         
-        $('#input_A, #input_B, #input_C').on('focus', function(){
+        $('#input_A, #input_B, #input_C').on('focus', function() {
             $(this).toggleClass('focus');
         });
 
-        $('#input_A, #input_B, #input_C').on('blur', function(){
+        $('#input_A, #input_B, #input_C').on('blur', function() {
             $(this).removeClass('focus');
         });
         
@@ -34,7 +34,7 @@ $(document).ready(function() {
             $.each( $('tbody tr'), function() {
                 if ( $(this).children(':nth-child(1)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
                     $(this).addClass('hide');
-                }else {
+                } else {
                     $(this).removeClass('hide');
                 }
             });
@@ -46,7 +46,7 @@ $(document).ready(function() {
             $.each( $('tbody tr'), function() {
                 if ( $(this).children(':nth-child(2)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
                     $(this).addClass('hide');;
-                }else {
+                } else {
                     $(this).removeClass('hide');;
                 }
             });
@@ -58,7 +58,7 @@ $(document).ready(function() {
             $.each( $('tbody tr'), function() {
                 if ( $(this).children(':nth-child(3)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
                     $(this).addClass('hide');;
-                }else {
+                } else {
                     $(this).removeClass('hide');;
                 }
             });
@@ -92,11 +92,11 @@ $(document).ready(function() {
 
 //         $('#table tbody').append(test);
         
-//         $('#input_A, #input_B, #input_C').on('focus', function(){
+//         $('#input_A, #input_B, #input_C').on('focus', function() {
 //             $(this).toggleClass('focus');
 //         });
 
-//         $('#input_A, #input_B, #input_C').on('blur', function(){
+//         $('#input_A, #input_B, #input_C').on('blur', function() {
 //             $(this).removeClass('focus');
 //         });
         
