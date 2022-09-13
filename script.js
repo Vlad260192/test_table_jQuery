@@ -6,11 +6,11 @@ $(document).ready(function() {
         $.each(data, function(key, value) {
 
             test += '<tr>';
-            test += '<td class="A">' +
+            test += '<td>' +
                 value.company + '</td>';
-            test += '<td class="B">' +
+            test += '<td>' +
                 value.contact + '</td>';
-            test += '<td class="C">' +
+            test += '<td>' +
                 value.country + '</td>';
             test += '</tr>';
 
@@ -20,6 +20,10 @@ $(document).ready(function() {
         
         $('#input_A, #input_B, #input_C').on('focus', function(){
             $(this).toggleClass('focus');
+        });
+
+        $('#input_A, #input_B, #input_C').on('blur', function(){
+            $(this).removeClass('focus');
         });
         
         $('#input_A, #input_B, #input_C').keyup(function() {
