@@ -66,4 +66,8 @@ input {
     border-radius: 2em;
 }
 
+.hide {
+    display: none;
+}
+
 /* =============== */

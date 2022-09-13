@@ -1,3 +1,5 @@
+// ===== First variant ===== //
+
 $(document).ready(function() {
     
     $.getJSON('test.json', function (data) {
@@ -26,19 +28,111 @@ $(document).ready(function() {
             $(this).removeClass('focus');
         });
         
-        $('#input_A, #input_B, #input_C').keyup(function() {
-            
-            let inputValue = $(this).val().toLowerCase();
+        $('#input_A').on('keyup', function() {
+            let inputValue = $(this);
 
-            $('tbody tr').filter(function() {
-                $(this).toggle( $(this).text().toLowerCase().indexOf(inputValue) > -1 );
+            $.each( $('tbody tr'), function() {
+                if ( $(this).children(':nth-child(1)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
+                    $(this).addClass('hide');
+                }else {
+                    $(this).removeClass('hide');
+                }
+            });
+        });
+
+        $('#input_B').on('keyup', function() {
+            let inputValue = $(this);
+
+            $.each( $('tbody tr'), function() {
+                if ( $(this).children(':nth-child(2)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
+                    $(this).addClass('hide');;
+                }else {
+                    $(this).removeClass('hide');;
+                }
+            });
+        });
+
+        $('#input_C').on('keyup', function() {
+            let inputValue = $(this);
+
+            $.each( $('tbody tr'), function() {
+                if ( $(this).children(':nth-child(3)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
+                    $(this).addClass('hide');;
+                }else {
+                    $(this).removeClass('hide');;
+                }
             });
         });
     });
 });
 
+
 // ============================================= //
 
+
+// ===== Second variant ===== //
+
+// $(document).ready(function() {
+    
+//     $.getJSON('test.json', function (data) {
+//         let test = '';
+
+//         $.each(data, function(key, value) {
+
+//             test += '<tr>';
+//             test += '<td>' +
+//                 value.company + '</td>';
+//             test += '<td>' +
+//                 value.contact + '</td>';
+//             test += '<td>' +
+//                 value.country + '</td>';
+//             test += '</tr>';
+
+//         });
+
+//         $('#table tbody').append(test);
+        
+//         $('#input_A, #input_B, #input_C').on('focus', function(){
+//             $(this).toggleClass('focus');
+//         });
+
+//         $('#input_A, #input_B, #input_C').on('blur', function(){
+//             $(this).removeClass('focus');
+//         });
+        
+//         $('#input_A').on('keyup', function() {
+            
+//             let inputValue = $(this).val().toLowerCase();
+        
+//             $('tbody tr').filter(function() {
+//                 $(this).toggle( $(this).children(':nth-child(1)').text().toLowerCase().indexOf(inputValue) > -1 );
+//             });
+//         });
+
+//         $('#input_B').on('keyup', function() {
+            
+//             let inputValue = $(this).val().toLowerCase();
+        
+//             $('tbody tr').filter(function() {
+//                 $(this).toggle( $(this).children(':nth-child(2)').text().toLowerCase().indexOf(inputValue) > -1 );
+//             });
+//         });
+
+//         $('#input_C').on('keyup', function() {
+            
+//             let inputValue = $(this).val().toLowerCase();
+        
+//             $('tbody tr').filter(function() {
+//                 $(this).toggle( $(this).children(':nth-child(3)').text().toLowerCase().indexOf(inputValue) > -1 );
+//             });
+//         });
+//     });
+// });
+
+// ============================================= //
+
+
+// ===== Dumb variant ===== //
 
 // $(document).ready(function() {
     
