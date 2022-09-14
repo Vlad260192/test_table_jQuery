@@ -1,4 +1,5 @@
-// ===== First variant ===== //
+
+// ===== Final variant ===== //
 
 $(document).ready(function() {
     
@@ -20,57 +21,114 @@ $(document).ready(function() {
 
         $('#table tbody').append(test);
         
-        $('#input_A, #input_B, #input_C').on('focus', function() {
+        $('#company, #contact, #country').on('focus', function() {
             $(this).toggleClass('focus');
         });
 
-        $('#input_A, #input_B, #input_C').on('blur', function() {
+        $('#company, #contact, #country').on('blur', function() {
             $(this).removeClass('focus');
         });
         
-        $('#input_A').on('keyup', function() {
-            let inputValue = $(this);
-
-            $.each( $('tbody tr'), function() {
-                if ( $(this).children(':nth-child(1)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
-                    $(this).addClass('hide');
-                } else {
-                    $(this).removeClass('hide');
-                }
-            });
+        $('tbody tr').each(function(){
+            $(this).children(':nth-child(1)').attr('data-input', 'company');
+            $(this).children(':nth-child(2)').attr('data-input', 'contact');
+            $(this).children(':nth-child(3)').attr('data-input', 'country');
         });
 
-        $('#input_B').on('keyup', function() {
-            let inputValue = $(this);
+        let $filterRows = $('#table tbody').find('tr');
+        let $inputs = $('#company, #contact, #country');
+        
+        $inputs.on('keyup', function(){
+            
+            $filterRows.hide().filter(function(){
+                return $(this).find('td').filter(function() {
 
-            $.each( $('tbody tr'), function() {
-                if ( $(this).children(':nth-child(2)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
-                    $(this).addClass('hide');;
-                } else {
-                    $(this).removeClass('hide');;
-                }
-            });
-        });
+                    let tdText = $(this).text().toLowerCase();
+                    let inputValue = $('#' + $(this).data('input')).val().toLowerCase();
 
-        $('#input_C').on('keyup', function() {
-            let inputValue = $(this);
+                return tdText.indexOf(inputValue) != -1;
 
-            $.each( $('tbody tr'), function() {
-                if ( $(this).children(':nth-child(3)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
-                    $(this).addClass('hide');;
-                } else {
-                    $(this).removeClass('hide');;
-                }
-            });
+                }).length == $(this).find('td').length;
+            }).show();
+
         });
     });
 });
 
+// ============================================= //
+
+// ===== Second variant ===== //
+
+// $(document).ready(function() {
+    
+//     $.getJSON('test.json', function (data) {
+//         let test = '';
+
+//         $.each(data, function(key, value) {
+
+//             test += '<tr>';
+//             test += '<td>' +
+//                 value.company + '</td>';
+//             test += '<td>' +
+//                 value.contact + '</td>';
+//             test += '<td>' +
+//                 value.country + '</td>';
+//             test += '</tr>';
+
+//         });
+
+//         $('#table tbody').append(test);
+        
+//         $('#input_A, #input_B, #input_C').on('focus', function() {
+//             $(this).toggleClass('focus');
+//         });
+
+//         $('#input_A, #input_B, #input_C').on('blur', function() {
+//             $(this).removeClass('focus');
+//         });
+        
+//         $('#input_A').on('keyup', function() {
+//             let inputValue = $(this);
+
+//             $.each( $('tbody tr'), function() {
+//                 if ( $(this).children(':nth-child(1)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
+//                     $(this).addClass('hide');
+//                 } else {
+//                     $(this).removeClass('hide');
+//                 }
+//             });
+//         });
+
+//         $('#input_B').on('keyup', function() {
+//             let inputValue = $(this);
+
+//             $.each( $('tbody tr'), function() {
+//                 if ( $(this).children(':nth-child(2)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
+//                     $(this).addClass('hide');;
+//                 } else {
+//                     $(this).removeClass('hide');;
+//                 }
+//             });
+//         });
+
+//         $('#input_C').on('keyup', function() {
+//             let inputValue = $(this);
+
+//             $.each( $('tbody tr'), function() {
+//                 if ( $(this).children(':nth-child(3)').text().toLowerCase().indexOf( $(inputValue).val().toLowerCase()) == -1 ) {
+//                     $(this).addClass('hide');;
+//                 } else {
+//                     $(this).removeClass('hide');;
+//                 }
+//             });
+//         });
+//     });
+// });
+
 
 // ============================================= //
 
-
-// ===== Second variant ===== //
+// ===== Third variant ===== //
 
 // $(document).ready(function() {
     
@@ -104,7 +162,7 @@ $(document).ready(function() {
             
 //             let inputValue = $(this).val().toLowerCase();
         
-//             $('tbody tr').filter(function() {
+//             $('tbody tr').each(function() {
 //                 $(this).toggle( $(this).children(':nth-child(1)').text().toLowerCase().indexOf(inputValue) > -1 );
 //             });
 //         });
@@ -113,7 +171,7 @@ $(document).ready(function() {
             
 //             let inputValue = $(this).val().toLowerCase();
         
-//             $('tbody tr').filter(function() {
+//             $('tbody tr').each(function() {
 //                 $(this).toggle( $(this).children(':nth-child(2)').text().toLowerCase().indexOf(inputValue) > -1 );
 //             });
 //         });
@@ -122,7 +180,7 @@ $(document).ready(function() {
             
 //             let inputValue = $(this).val().toLowerCase();
         
-//             $('tbody tr').filter(function() {
+//             $('tbody tr').each(function() {
 //                 $(this).toggle( $(this).children(':nth-child(3)').text().toLowerCase().indexOf(inputValue) > -1 );
 //             });
 //         });
