@@ -19,7 +19,7 @@ $(document).ready(function() {
         $('#table tbody').append(test);
         
         $('#company, #contact, #country').on('focus', function() {
-            $(this).toggleClass('focus');
+            $(this).addClass('focus');
         });
 
         $('#company, #contact, #country').on('blur', function() {
